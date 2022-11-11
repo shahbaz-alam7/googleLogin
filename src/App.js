@@ -1,46 +1,33 @@
-import { useEffect, useState } from "react";
-import jwt_decode from "jwt-decode";
 import "./App.css";
-
+import { useState } from "react";
+import Google from "./components/Google";
+import PdfMaker from "./components/PdfMaker";
+import { data } from "./components/API";
 function App() {
-  const [user, setUser] = useState({});
-  const handleCallbackResponsez = (response) => {
-    // console.log("token ", response.credential);
-    let userObject = jwt_decode(response.credential);
-    console.log(userObject);
-    setUser(userObject);
-    document.getElementById("signInDiv").hidden = true;
+  const [sendData, setSendData] = useState(data[0]);
+  const [toggle, setToggle] = useState(false);
+
+  const showInvoices = (i) => {
+    setSendData(data[i]);
+    console.log(i);
+    setToggle(true);
   };
-  const signOutHandle = (e) => {
-    setUser({});
-    document.getElementById("signInDiv").hidden = false;
-  };
-  useEffect(() => {
-    /*global google*/
-    google.accounts.id.initialize({
-      client_id:
-        "685827706441-6gsel3e5uq4edb9qk9ui9nthf7bevjac.apps.googleusercontent.com",
-      callback: handleCallbackResponsez,
-    });
-    google.accounts.id.renderButton(document.getElementById("signInDiv"), {
-      theme: "outline",
-      size: "large",
-    });
-    google.accounts.id.prompt();
-  }, []);
   return (
-    <div className="App">
-      <div id="signInDiv"></div>
-      {user && (
-        <div>
-          <img src={user.picture} alt="" />
-          <p>{user.name}</p>
-          <p>{user.email}</p>
-        </div>
-      )}
-      {Object.keys(user).length != 0 && (
-        <button onClick={(e) => signOutHandle(e)}>Sign Out</button>
-      )}
+    <div className="app">
+      {/* <Google /> */}
+      {data.map((item, i) => {
+        return (
+          <button
+            key={i}
+            onClick={() => {
+              showInvoices(i);
+            }}
+          >
+            Show Invoices {i+1}
+          </button>
+        );
+      })}
+      {toggle && <PdfMaker sendData={sendData} />}
     </div>
   );
 }
