@@ -3,6 +3,8 @@ import { useState } from "react";
 import Google from "./components/Google";
 import PdfMaker from "./components/PdfMaker";
 import { data } from "./components/API";
+import SpreadSheet from "./components/SpreadSheet";
+import Image from "./components/Image";
 function App() {
   const [sendData, setSendData] = useState(data[0]);
   const [toggle, setToggle] = useState(false);
@@ -15,7 +17,7 @@ function App() {
   return (
     <div className="app">
       {/* <Google /> */}
-      {data.map((item, i) => {
+      {/* {data.map((item, i) => {
         return (
           <button
             key={i}
@@ -27,11 +29,11 @@ function App() {
           </button>
         );
       })}
-      {toggle && <PdfMaker sendData={sendData} />}
+      {toggle && <PdfMaker sendData={sendData} />} */}
+      <SpreadSheet />
+      {/* <Image/> */}
     </div>
   );
 }
 
 export default App;
-// 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
-// 685827706441-6gsel3e5uq4edb9qk9ui9nthf7bevjac.apps.googleusercontent.com

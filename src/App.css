@@ -231,3 +231,18 @@ td {
 
   opacity: 0.6;
 }
+.app{
+  width: 75vw;
+  margin: 40px auto;
+}
+.container {
+  width: 80vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container img {
+  width: 350px;
+  border: 2px solid black;
+  height: 350px;
+}
