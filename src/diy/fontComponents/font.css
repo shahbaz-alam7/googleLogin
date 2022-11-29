@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: space-evenly;
   background: #ffffff;
-  border: 2px solid #003459;
+  border: 1px solid #003459;
 }
 .circle {
   width: 36px;
@@ -39,11 +39,11 @@
   color: #003459;
 }
 
-/* ===================font ================= */
+/* ===================font family ================= */
 div[id^="font-picker"] {
   background: #ffffff !important;
   height: 50px;
-  border: 2px solid #003459;
+  border: 1px solid #003459;
   border-radius: 25px;
 }
 div[id^="font-picker"] .dropdown-button {
@@ -89,7 +89,7 @@ div[id^="font-picker"] ul {
   width: 170px;
   height: 50px;
   background: #ffffff;
-  border: 2px solid #003459;
+  border: 1px solid #003459;
   border-radius: 25px;
   display: flex;
   align-items: center;
@@ -109,7 +109,7 @@ div[id^="font-picker"] ul {
   background: #f2f2f2;
   border-radius: 25px;
 }
-/* dropdown */
+/*========================= dropdown==================== */
 
 .dropbtn {
   background-color: white;
