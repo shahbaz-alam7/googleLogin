@@ -5,6 +5,8 @@ import PdfMaker from "./components/PdfMaker";
 import { data } from "./components/API";
 import SpreadSheet from "./components/SpreadSheet";
 import Image from "./components/Image";
+import Main from "./diy/Main";
+import FontStyleComp from "./diy/FontStyleComp";
 function App() {
   const [sendData, setSendData] = useState(data[0]);
   const [toggle, setToggle] = useState(false);
@@ -15,7 +17,7 @@ function App() {
     setToggle(true);
   };
   return (
-    <div className="app">
+    <div className="pp">
       {/* <Google /> */}
       {/* {data.map((item, i) => {
         return (
@@ -30,8 +32,10 @@ function App() {
         );
       })}
       {toggle && <PdfMaker sendData={sendData} />} */}
-      <SpreadSheet />
+      {/* <SpreadSheet /> */}
       {/* <Image/> */}
+      {/* <Main /> */}
+      <FontStyleComp />
     </div>
   );
 }
