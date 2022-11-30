@@ -132,3 +132,42 @@
 
   color: #003459;
 }
+
+/*==============================Frames ========================*/
+* {
+  margin: 0;
+  padding: 0;
+}
+.frame-container {
+  display: flex;
+}
+.frames {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00345943;
+  width: 5%;
+}
+.frames div svg {
+  font-size: 50px !important;
+  color: rgb(29, 28, 28);
+  /* color: #003459; */
+}
+.frame-viewer {
+  width: 45%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cec9c987;
+}
+.frame-viewer svg {
+  font-size: 450px;
+  color: grey;
+  z-index: -4;
+}
+h1 {
+  position: absolute;
+  top: 50% left 50%;
+}

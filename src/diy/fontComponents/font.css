@@ -23,9 +23,17 @@
   height: 36px;
   border-radius: 50%;
 }
+.color-picker-box {
+  position: relative;
+}
 .popover {
   position: absolute;
   z-index: 3;
+  padding: 21px;
+  background: #ebebeb;
+  border-radius: 25px;
+  left: -61px;
+  top: 70px;
 }
 .cover {
   position: fixed;
@@ -37,6 +45,18 @@
 .icon-up-down {
   height: 50px;
   color: #003459;
+}
+/* ==========triangle============ */
+.arrow-up {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 52px;
+  left: 58px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+
+  border-bottom: 25px solid #ebebeb;
 }
 
 /* ===================font family ================= */
@@ -165,4 +185,3 @@ div[id^="font-picker"] ul {
   background: #dedede;
   border-radius: 15px;
 }
-

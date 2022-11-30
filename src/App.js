@@ -7,6 +7,7 @@ import SpreadSheet from "./components/SpreadSheet";
 import Image from "./components/Image";
 import Main from "./diy/Main";
 import FontStyleComp from "./diy/FontStyleComp";
+import Frames from "./diy/Frames";
 function App() {
   const [sendData, setSendData] = useState(data[0]);
   const [toggle, setToggle] = useState(false);
@@ -35,7 +36,8 @@ function App() {
       {/* <SpreadSheet /> */}
       {/* <Image/> */}
       {/* <Main /> */}
-      <FontStyleComp />
+      {/* <FontStyleComp /> */}
+      <Frames />
     </div>
   );
 }

@@ -4,8 +4,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import AddIcon from "@mui/icons-material/Add";
 import poster from "./img/poster.png";
+import utility from "./img/utility-stricker.png";
 import floor_graphics from "./img/floor_graphics.png";
 import signages from "./img/signages.png";
+import Portrait from "./helper/Portrait";
+import Landscape from "./helper/Landscape";
 const Home = () => {
   return (
     <div className="div-home-container">
@@ -36,13 +39,18 @@ const Home = () => {
             <img src={signages} alt="" />
             <p className="caption">Signages</p>
           </div>
+          <div className="category">
+            <img src={utility} alt="" />
+            <p className="caption">Utility Stickers</p>
+          </div>
         </div>
       </div>
       <div className="diy-home-btm">
         <p className="heading">All Categories</p>
         <div className="div">
-          {/* <Portrait title="Notice" color="#00E0FF" />
+          <Portrait title="Notice" color="#00E0FF" />
           <Portrait title="Danger" color="#FF0000" />
+          <Portrait title="Caution" color="#FFE500" />
           <Portrait title="Caution" color="#FFE500" />
           <Portrait title="Notice" color="#00E0FF" />
           <Portrait title="Caution" color="#FFE500" />
@@ -51,7 +59,7 @@ const Home = () => {
           <Landscape title="Caution" color="#FFE500" />
           <Landscape title="Danger" color="#FF0000" />
           <Landscape title="Warning" color="#FFA800" />
-          <Landscape title="Warning" color="#FFA800" /> */}
+          <Landscape title="Warning" color="#FFA800" />
         </div>
       </div>
     </div>
