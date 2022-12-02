@@ -2,7 +2,7 @@ import React from "react";
 import "./landscape.css";
 import mainImg from "../img/mainImg.png";
 import topImg from "../img/notice.png";
-const Landscape = ({ title, color }) => {
+const Landscape = ({ Signal_Word, Text_2, Text_1, Text_3, color }) => {
   return (
     <div className="landscape">
       <div className="pictograms">
@@ -11,16 +11,18 @@ const Landscape = ({ title, color }) => {
           style={{ background: `${color}` }}
         >
           <img src={topImg} alt="img" />
-          <p className="pic-title">{title}</p>
+          <p className="pic-title">{Signal_Word}</p>
         </div>
         <div className="pictogram-content">
           <div className="pictogram-img-box">
             <img src={mainImg} alt="img" />
           </div>
           <div className="pictogram-desc-box">
-            <h6 className="btm-title">Respiratory protection needed</h6>
+            <h6 className="btm-title">
+              {Text_1 || "Respiratory protection needed"}
+            </h6>
             <p className="btm-desc">
-              Toxic gases can cause eye and skin irritation
+              {Text_2 || "Toxic gases can cause eye and skin irritation"}
             </p>
           </div>
         </div>

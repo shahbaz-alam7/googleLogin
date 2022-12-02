@@ -3,9 +3,7 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 
 const RangePicker = ({ setRange, range }) => {
-  const [value, setValue] = React.useState(range);
   const handleSliderChange = (event, newValue) => {
-    setValue(newValue);
     setRange(newValue);
   };
   return (
@@ -24,7 +22,7 @@ const RangePicker = ({ setRange, range }) => {
               border: "1px solid #003459",
             },
           }}
-          defaultValue={value}
+          defaultValue={range}
           aria-label="Small"
           valueLabelDisplay="auto"
         />

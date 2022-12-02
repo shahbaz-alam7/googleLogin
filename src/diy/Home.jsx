@@ -1,45 +1,32 @@
 import React from "react";
 import "./styles.css";
-import SearchIcon from "@mui/icons-material/Search";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import AddIcon from "@mui/icons-material/Add";
 import poster from "./img/poster.png";
 import utility from "./img/utility-stricker.png";
 import floor_graphics from "./img/floor_graphics.png";
 import signages from "./img/signages.png";
 import Portrait from "./helper/Portrait";
 import Landscape from "./helper/Landscape";
-const Home = () => {
+const Home = ({ setName }) => {
   return (
     <div className="div-home-container">
-      <div className="diy-home-top">
-        <div className="content">
-          <div className="inputBox">
-            <SearchIcon id="icon-diy" />
-            <input type="text" placeholder="Search for a category" />
-          </div>
-          <div className="diy-btn">
-            <AddIcon fontSize="large" id="create-btn" />
-            <span>Create New</span>
-          </div>
-        </div>
-      </div>
+      
       <div className="diy-home-mid">
         <p className="heading">Categories We Offer</p>
         <div className="categories">
-          <div className="category">
+          <div className="category" onClick={() => setName("Posters")}>
             <img src={poster} alt="" />
             <p className="caption">Posters</p>
           </div>
-          <div className="category">
+          <div className="category" onClick={() => setName("Floor Graphics")}>
             <img src={floor_graphics} alt="" />
             <p className="caption">Floor Graphics</p>
           </div>
-          <div className="category">
+          <div className="category" onClick={() => setName("Signages")}>
             <img src={signages} alt="" />
             <p className="caption">Signages</p>
           </div>
-          <div className="category">
+          <div className="category" onClick={() => setName("Utility Stickers")}>
             <img src={utility} alt="" />
             <p className="caption">Utility Stickers</p>
           </div>
@@ -52,14 +39,6 @@ const Home = () => {
           <Portrait title="Danger" color="#FF0000" />
           <Portrait title="Caution" color="#FFE500" />
           <Portrait title="Caution" color="#FFE500" />
-          <Portrait title="Notice" color="#00E0FF" />
-          <Portrait title="Caution" color="#FFE500" />
-          <Portrait title="Warning" color="#FFA800" />
-          <Landscape title="Notice" color="#00E0FF" />
-          <Landscape title="Caution" color="#FFE500" />
-          <Landscape title="Danger" color="#FF0000" />
-          <Landscape title="Warning" color="#FFA800" />
-          <Landscape title="Warning" color="#FFA800" />
         </div>
       </div>
     </div>

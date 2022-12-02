@@ -42,9 +42,7 @@ const allColors = [
   "#AB149E",
 ];
 
-const ColorPicker = ({ setFinalColor }) => {
-  const [colors, setColors] = useState("#00E0FF");
-
+const ColorPicker = ({ finalColor, setFinalColor }) => {
   const [showPicker, setShowPicker] = useState(false);
 
   const onClick = () => {
@@ -56,14 +54,13 @@ const ColorPicker = ({ setFinalColor }) => {
   };
 
   const onChange = (color) => {
-    setColors(color.hex);
     setFinalColor(color.hex);
   };
   return (
     <div className="color-picker-box">
       {showPicker && <div className="arrow-up"></div>}
       <div className="color" onClick={onClick}>
-        <div style={{ background: `${colors}` }} className="circle" />
+        <div style={{ background: `${finalColor}` }} className="circle" />
         {showPicker ? (
           <IoIosArrowUp size={30} color={"#003459"} />
         ) : (
@@ -73,7 +70,11 @@ const ColorPicker = ({ setFinalColor }) => {
       {showPicker ? (
         <div className="popover">
           <div className="cover" onClick={onClose} />
-          <CirclePicker color={colors} colors={allColors} onChange={onChange} />
+          <CirclePicker
+            color={finalColor}
+            colors={allColors}
+            onChange={onChange}
+          />
         </div>
       ) : null}
     </div>

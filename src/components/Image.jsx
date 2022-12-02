@@ -1,8 +1,8 @@
 import React from "react";
-import img from "./gif.gif"
+import img from "./gif.gif";
 const Image = () => {
   return (
-    <div className="container">
+    <div className="container box">
       <div>
         <p>These are images</p>
       </div>

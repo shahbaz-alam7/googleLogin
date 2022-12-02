@@ -11,9 +11,11 @@ const SpreadSheet = () => {
   };
 
   return (
-    <div>
+    <div className="box">
       <ExcelRequestsImport uploadHandler={setData} />
-      <button onClick={createRequests}>Add Data</button>
+      <button className="btn" onClick={createRequests}>
+        Add Data
+      </button>
     </div>
   );
 };

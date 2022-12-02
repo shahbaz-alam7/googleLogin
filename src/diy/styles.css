@@ -1,5 +1,6 @@
 .div-home-container {
-  width: 98vw;
+  /* width: 100vw; */
+  margin-bottom: 20px;
 }
 .diy-home-top {
   width: 80%;
@@ -140,18 +141,20 @@
 }
 .frame-container {
   display: flex;
+  margin-top: 40px;
 }
 .frames {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: #00345943;
-  width: 5%;
+  width: 10%;
+  overflow: auto;
 }
-.frames div svg {
-  font-size: 50px !important;
-  color: rgb(29, 28, 28);
+.frames div {
+  background-color: blue;
   /* color: #003459; */
 }
 .frame-viewer {
@@ -161,13 +164,56 @@
   align-items: center;
   justify-content: center;
   background-color: #cec9c987;
+  /* background-color: black; */
 }
 .frame-viewer svg {
   font-size: 450px;
+}
+#frame-div {
+  background: green;
   color: grey;
-  z-index: -4;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  z-index: -5;
+  justify-content: center;
+  /* clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); */
+}
+.frame-item {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  margin: 10px;
+}
+#frame {
+  width: 400px;
+  height: 400px;
+  background: red;
 }
 h1 {
   position: absolute;
   top: 50% left 50%;
+}
+/* ====================items========================= */
+.items-box {
+  width: 90vw;
+  margin: 20px auto;
+}
+.portrait-landscape-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.heading {
+  padding: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: capitalize;
+
+  color: #003459;
 }

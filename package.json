@@ -23,6 +23,7 @@
     "react-excel-renderer": "^1.1.0",
     "react-google-login": "^5.2.2",
     "react-icons": "^4.6.0",
+    "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "reactcss": "^1.2.3",
     "scheduler": "^0.23.0",

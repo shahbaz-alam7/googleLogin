@@ -1,26 +1,21 @@
 import React, { useState } from "react";
 
 const FontSize = ({ finalFontSize, setFinalFontSize }) => {
-  const [size, setSize] = useState(finalFontSize);
   const [display, setDisplay] = useState(false);
   const increament = () => {
     setDisplay(false);
-    if (size < 36) {
-      setSize(size + 2);
-      setFinalFontSize(size + 2);
-    } else if (size < 70) {
-      setSize(size + 12);
-      setFinalFontSize(size + 12);
+    if (finalFontSize < 36) {
+      setFinalFontSize(finalFontSize + 2);
+    } else if (finalFontSize < 70) {
+      setFinalFontSize(finalFontSize + 12);
     }
   };
   const decreament = () => {
     setDisplay(false);
-    if (size > 36) {
-      setSize(size - 12);
-      setFinalFontSize(size - 12);
-    } else if (size > 8) {
-      setSize(size - 2);
-      setFinalFontSize(size - 2);
+    if (finalFontSize > 36) {
+      setFinalFontSize(finalFontSize - 12);
+    } else if (finalFontSize > 8) {
+      setFinalFontSize(finalFontSize - 2);
     }
   };
   const fontSizes = [8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72];
@@ -29,10 +24,9 @@ const FontSize = ({ finalFontSize, setFinalFontSize }) => {
       <button onClick={decreament} className="size-changer">
         -
       </button>
-      {/* <input type="text" value={size} /> */}
       <div className="dropdown">
         <button onClick={() => setDisplay(!display)} className="dropbtn">
-          {size}
+          {finalFontSize}
         </button>
         {display && (
           <div
@@ -44,7 +38,6 @@ const FontSize = ({ finalFontSize, setFinalFontSize }) => {
                 <p
                   key={i}
                   onClick={() => {
-                    setSize(item);
                     setDisplay(false);
                     setFinalFontSize(item);
                   }}

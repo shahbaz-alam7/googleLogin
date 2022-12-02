@@ -231,7 +231,7 @@ td {
 
   opacity: 0.6;
 }
-.app{
+.app {
   width: 75vw;
   margin: 40px auto;
 }
@@ -245,4 +245,8 @@ td {
   width: 350px;
   border: 2px solid black;
   height: 350px;
+}
+.box {
+  width: 75vw;
+  margin: 40px auto;
 }

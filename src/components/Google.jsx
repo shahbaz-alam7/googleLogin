@@ -27,7 +27,7 @@ function Google() {
     google.accounts.id.prompt();
   }, []);
   return (
-    <div className="App">
+    <div className="App box">
       <div id="signInDiv"></div>
       {user && (
         <div>
