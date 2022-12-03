@@ -8,6 +8,7 @@ import Main from "./diy/Main";
 import FontStyleComp from "./diy/FontStyleComp";
 import Frames from "./diy/Frames";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Create from "./diy/Create";
 import Navbar from "./components/Navbar";
 function App() {
   const [sendData, setSendData] = useState(data[0]);
@@ -21,14 +22,15 @@ function App() {
   return (
     <>
       <BrowserRouter>
-         <Navbar />
+        <Navbar />
         <Routes>
-           <Route path="/" element={<Main />} />
-           <Route path="/google" element={<Google />} />
-           <Route path="/sheet" element={<SpreadSheet />} />
-           <Route path="/img" element={<Image />} />
-           <Route path="/frame" element={<Frames />} />
-           <Route path="/font" element={<FontStyleComp />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/google" element={<Google />} />
+          <Route path="/sheet" element={<SpreadSheet />} />
+          <Route path="/img" element={<Image />} />
+          <Route path="/frame" element={<Frames />} />
+          <Route path="/font" element={<FontStyleComp />} />
+          <Route path="/create" element={<Create />} />
         </Routes>
       </BrowserRouter>
     </>
